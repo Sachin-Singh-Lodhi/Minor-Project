@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+
+  <title>
+    FEEDBACK FORM
+  </title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script type="text/javascript" src="jsscript/jquery.js"></script>
+    <script type="text/javascript" src="jsscript/feedback.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <style media="screen">
+    body {
+      background-image: url('images/1.jpg');
+      color: white;
+    }
+
+    .submitb {
+      background-color: black;
+      color: white;
+      border: 2px solid  #7FFFD4;
+      border-radius:12px
+    }
+
+    .submitb:hover {
+      background-color: #ADD8E6;
+      color: black;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div  id = "form-div" style="margin: auto; display: table;">
+    <br />
+    <form class="form-class" onsubmit="postToDB()" action="" target="_self" id="mG61Hd" method="POST"
+      autocomplete="off" style="">
+
+      E.ACR (max points 10):<br />
+      <div style="display: flex;width : 500px;">
+
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "e1" name="entry.1201155317" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id="e2" name="entry.437833064" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id="e3" name="entry.937266087" style="width: 100%;" class="form-control" />
+        </div>
+
+
+
+
+      </div>
+      F.Contribution to society (max points 10) :<br />
+      <div style="display: flex; width:500px;">
+
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "f1" name="entry.1311904017" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "f2" name="entry.618636663" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "f3" name="entry.192454517" style="width: 100%;" class="form-control" />
+        </div>
+      </div>
+
+
+
+      Total (max Points 100):<br />
+      <div style="display: flex; width:500px;">
+
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "t1" name="entry.329954315" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "t2" name="entry.244254216" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "t3" name="entry.1214504438" style="width: 100%;" class="form-control" />
+        </div>
+      </div>
+
+      Total on 10 Points scale:<br />
+      <div style="display: flex; width:500px;">
+
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "s1" name="entry.2061708700" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "s2" name="entry.1874731086" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">
+          <input type="text" id = "s3" name="entry.273148301" style="width: 100%;" class="form-control" />
+        </div>
+      </div>
+
+      <div style="padding-top:4px;padding-bottom: 4px;margin-top: 30px; padding-left: 40px;font-size : 2.3rem; font-weight : bold; ">Student Feedback Form</div>
+
+      <div style="padding-bottom: 18px; padding-left: 150px;font-size : 16px; margin-bottom: 30px;">(To be used by institutions)</div>
+
+
+
+      <div style="display: flex; padding-bottom: 18px;width : 500px;">
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">Academic Year<br />
+          <input type="text" id = "year" name="entry.287034169" style="width: 100%;" class="form-control" />
+        </div>
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">Semester<br />
+          <select id = "sem" name="entry.1117094820" style="width : 159px;" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        </div>
+        <div style=" margin-left : 1%; margin-right : 0; width : 49%;">Date of the feedback<br />
+          <input type="date" id = "date" name="entry.951948026" style="width: 100%;" class="form-control" />
+        </div>
+      </div>
+      <div style="display: flex; padding-bottom: 18px;width : 500px;">
+        <div style=" margin-left : 0; margin-right : 1%; width : 49%;">Course<br />
+          <select id = "course" name="entry.1701174829" style="width : 225px;" class="form-control">
+            <option>Very good</option>
+            <option>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+            <option>Very poor</option>
+          </select>
+        </div>
+        <div style=" margin-left : 1%; margin-right : 0; width : 49%;">Name of the Faculty<br />
+          <select id = "fname" name="entry.1637376189" style="width : 250px;" class="form-control">
+            <option>Very good</option>
+            <option>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+            <option>Very poor</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="padding-bottom: 10px; padding-left: 80px;font-size : 1.2rem; font-weight : bold; ">For getting filled in through Student</div>
+
+      <div style="padding-bottom: 18px;">1.Has the Teacher covered entire Syllabus as prescribed by <br> University College/Board?<br />
+        <select name="entry.476120533" id = "syllabus" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">2.Has the Teacher covered relevant topics beyond syllabus<br />
+        <select name="entry.557343923" id = "topics" fnamele="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">3.Effectiveness of Teacher in terms of Technical content/ <br>course content:<br>
+        <select id = "technical" name="entry.271295300" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">4.Effectiveness of Teacher in terms of Communication skills<br />
+        <select id = "communication" name="entry.674099652" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">5.Effectiveness of Teacher in terms of Use of teaching aids<br />
+        <select id = "teaching_aids" name="entry.1543283755" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">6.Pace on which contents were covered<br />
+        <select id = "pace" name="entry.1692108069" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">7.Motivation and inspiration for students to learn<br />
+        <select id = "motivation" name="entry.1011947761" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">6.Support for the development of students' skill <br> (i) Practical demonstration <br>
+        <select id = "practical" name="entry.149876890" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">6.Support for the development of students' skill <br>(ii) Hands on training<br>
+        <select name="entry.1765730646" id = "training" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">10.Clarity of expectaton of students<br />
+        <select name="entry.1529066382" id = "clarity" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">11.Feedback provided on Students' progress<br />
+        <select name="entry.1725339590" id = "progress" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div style="padding-bottom: 18px;">12.Willingness to offer help and advice to students.<br />
+        <select name="entry.1651698866" id = "willingness" style="width : 500px;" class="form-control">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <option>Poor</option>
+          <option>Very poor</option>
+        </select>
+      </div>
+      <div class="text-center" style="padding-bottom: 18px; margin-bottom: 100px; margin-top: 50px;">
+        <input name="skip_Submit" class="submit submitb" value="Submit" type="submit" style="padding: 4px 32px;" /></div>
+    </form>
+
+  </div>
+
+
+
+  <div id="success-msg" style = "height: 30%; width: 100%;display: none;">
+      <h1>Feedback Successful</h1>
+  </div>
+
+</body>
+
+
+</html>
